@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../../components/navbar/Navbar";
-import Work from "../../components/work/Work";
+import { Work, Testimonial } from "../../components/home-page";
 import {
   Box,
   Stack,
@@ -15,6 +15,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { colors } from "../../styles/globals";
 import HEADER from "../../assets/headerBackground.jpg";
 import ABOUTIMG from "../../assets/aboutBackground.png";
+import BRAND1 from "../../assets/brand1.svg";
 
 const StyledBox = styled(Box)({
   background: `url(${HEADER})`,
@@ -39,9 +40,9 @@ const StyledButton = styled(Button)({
   color: colors.WHITE,
   textTransform: "capitalize",
   backgroundColor: colors.SECONDARY,
-  borderRadius:"15px",
-  padding:"0.5rem 1.5rem",
-  fontSize:"0.7rem",
+  borderRadius: "15px",
+  padding: "0.5rem 1.5rem",
+  fontSize: "0.7rem",
   margin: "0.5rem 0",
   "&:hover": {
     backgroundColor: colors.PRIMARY,
@@ -67,7 +68,11 @@ const Homepage = () => {
               fromavailable,variations of the passages.
             </Typography>
             <StyledButton>
-              Get Started <IoIosArrowRoundForward fontSize={"1.5rem"} color={colors.PRIMARY}/>
+              Get Started{" "}
+              <IoIosArrowRoundForward
+                fontSize={"1.5rem"}
+                color={colors.PRIMARY}
+              />
             </StyledButton>
           </StyledTextBox>
         </Container>
@@ -99,23 +104,101 @@ const Homepage = () => {
               </Typography>
               <Stack direction="row" spacing={2} marginY={3}>
                 <Avatar>
-                    <BsTelephone color={colors.PRIMARY}/>
+                  <BsTelephone color={colors.PRIMARY} />
                 </Avatar>
-                <Stack direction="column" >
+                <Stack direction="column">
                   <Typography fontWeight="500">012345678</Typography>
                   <Typography fontSize="0.8rem">Call Us Anytime</Typography>
                 </Stack>
               </Stack>
               <StyledButton>
-              Get Free Estimate <IoIosArrowRoundForward fontSize={"1.5rem"} color={colors.PRIMARY}/>
-            </StyledButton>
+                Get Free Estimate{" "}
+                <IoIosArrowRoundForward
+                  fontSize={"1.5rem"}
+                  color={colors.PRIMARY}
+                />
+              </StyledButton>
             </StyledTextBox>
           </Stack>
           <StyledAboutBox />
         </Stack>
       </Container>
       <Container maxWidth={"md"}>
-        <Box sx={{borderRadius:"10px", backgroundColor:colors.GREY, padding:"1.5rem 1rem"}}>jhgh</Box>
+        <Box
+          sx={{
+            borderRadius: "10px",
+            backgroundColor: colors.GREY,
+            padding: "2rem 1rem",
+          }}
+        >
+          <Typography
+            mb
+            variant="h5"
+            fontSize={"1.8rem"}
+            textAlign="center"
+            paddingX={["3rem", "15rem"]}
+          >
+            What the People Thinks About Us
+          </Typography>
+          <Stack direction={["column", "row"]} paddingY={5}>
+            <Testimonial
+              name="Nattasha Mith"
+              city="Sydney, USA"
+              text="Lorem Ipsum is simply dummy text of the typesetting industry.Ipsum has been."
+            />
+            <Testimonial
+              name={"Raymond Galario"}
+              city={"Sydney, Australia"}
+              text="Lorem Ipsum is simply dummy text of the typesetting industry. 
+                Ipsum has been scrambled it 
+                to make a type book."
+            />
+            <Testimonial
+              name="Benny Roll"
+              city="Sydney, New York"
+              text="Lorem Ipsum is simply dummy 
+              text of the typesetting industry. 
+              Ipsum has been scrambled."
+            />
+          </Stack>
+        </Box>
+      </Container>
+      <Container maxWidth={"md"}>
+        <Stack direction={["column", "row"]}>
+          <Box
+            component={"img"}
+            src={BRAND1}
+            width={"100%"}
+            maxHeight={"3.5rem"}
+            sx={{
+              objectFit: "contain",
+              marginRight: ["0rem", "1rem"],
+              marginBottom: ["1.5rem"],
+            }}
+          />
+          <Box
+            component={"img"}
+            src={BRAND1}
+            width={"100%"}
+            maxHeight={"3.5rem"}
+            sx={{
+              objectFit: "contain",
+              marginRight: ["0rem", "1rem"],
+              marginBottom: ["1.5rem"],
+            }}
+          />
+          <Box
+            component={"img"}
+            src={BRAND1}
+            width={"100%"}
+            maxHeight={"3.5rem"}
+            sx={{
+              objectFit: "contain",
+              marginRight: ["0rem", "1rem"],
+              marginBottom: ["1.5rem"],
+            }}
+          />
+        </Stack>
       </Container>
     </>
   );
