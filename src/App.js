@@ -1,9 +1,15 @@
-import { Homepage } from './containers/Homepage';
+import { HomePage } from './containers/Homepage';
 import './App.css';
+import {Navbar }from './components/navbar';
+import {Footer} from './components/footer';
 
 function App() {
   return (
-   <Homepage/>
+    <>
+    <Navbar/>
+   <HomePage/>
+   <Footer/>
+    </>
   );
 }
 

@@ -1,6 +1,12 @@
 import React from "react";
-import Navbar from "../../components/navbar/Navbar";
-import { Work, Testimonial } from "../../components/home-page";
+import {
+  Work,
+  Testimonial,
+  Partners,
+  Heading,
+  ProjectsGallery,
+  ArticlesGallery,
+} from "../../components/home-page";
 import {
   Box,
   Stack,
@@ -15,27 +21,27 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { colors } from "../../styles/globals";
 import HEADER from "../../assets/headerBackground.jpg";
 import ABOUTIMG from "../../assets/aboutBackground.png";
-import BRAND1 from "../../assets/brand1.svg";
 
 const StyledBox = styled(Box)({
   background: `url(${HEADER})`,
   backgroundSize: "100% 100%",
-  backgroundPosition: "center center",
+  backgroundPosition: " center",
   backgroundRepeat: "no-repeat",
   borderBottomLeftRadius: "150px",
   display: "flex",
   alignItems: "center",
+
 });
 const StyledAboutBox = styled(Box)({
   background: `url(${ABOUTIMG})`,
-  backgroundSize: "100% 100%",
+  backgroundSize: "cover",
   backgroundPosition: "center center",
   backgroundRepeat: "no-repeat",
   borderBottomLeftRadius: "100px",
   borderTopRightRadius: "200px",
   width: "100%",
   height: "500px",
-});
+})
 const StyledButton = styled(Button)({
   color: colors.WHITE,
   textTransform: "capitalize",
@@ -52,16 +58,30 @@ const StyledButton = styled(Button)({
 const StyledTextBox = styled(Box)({
   lineHeight: "1rem",
   color: colors.SECONDARY,
-  textAlign: ["center", "left"],
+  "@media screen and (max-width: 1200px)": {
+   display:"flex",
+   flexDirection:"column",
+   alignItems:"center",
+   justifyContent:"center",
+  }});
+
+const StyledBorder = styled(Box)({
+  borderRight: `2px solid ${colors.PRIMARY}`,
+  "@media screen and (max-width: 1200px)": {
+    borderRight: "none",
+    borderBottom: `2px solid ${colors.PRIMARY}`,
+    paddingBottom: "2rem",
+    margin: "1rem",
+    width:"100%"
+  },
 });
 
-const Homepage = () => {
+const HomePage = () => {
   return (
     <>
-      <Navbar />
-      <StyledBox height={["80vh", "75vh"]}>
+      <StyledBox height={["70vh", "75vh"]}>
         <Container maxWidth={"md"}>
-          <StyledTextBox width={["100%", "43%"]}>
+          <StyledTextBox width={["100%", "43%"]}  textAlign={ ["center", "left"]}>
             <Typography variant="h3">Let Your Home Be Unique</Typography>
             <Typography>
               There are many variations of the passages of lorem Ipsum
@@ -77,14 +97,14 @@ const Homepage = () => {
           </StyledTextBox>
         </Container>
       </StyledBox>
-      <Container maxWidth={"md"} paddingY={"2rem"}>
+
+      <Container maxWidth={"md"}>
         <Stack direction={["column", "row"]} marginY={"5rem"}>
           <Work title={"Project Plan"} />
           <Work title={"Interior Work"} />
           <Work title={"Realization"} />
         </Stack>
-      </Container>
-      <Container maxWidth={"md"}>
+
         <Stack direction={["column", "row"]} paddingY={2} marginBottom={"2rem"}>
           <Stack
             alignItems={"center"}
@@ -93,7 +113,7 @@ const Homepage = () => {
             marginY={"3rem"}
             marginRight={["3rem"]}
           >
-            <StyledTextBox textAlign={"left"}>
+            <StyledTextBox textAlign={["center","left"]}>
               <Typography mb variant="h5" fontSize={"1.8rem"}>
                 We Create The Art Of Stylish Living Stylishly
               </Typography>
@@ -102,7 +122,7 @@ const Homepage = () => {
                 by the of readable content of a page when lookings at its
                 layouts the points of using that it has a more-or-less normal.
               </Typography>
-              <Stack direction="row" spacing={2} marginY={3}>
+              <Stack direction="row" spacing={2} marginY={3} marginX={"auto"}>
                 <Avatar>
                   <BsTelephone color={colors.PRIMARY} />
                 </Avatar>
@@ -122,24 +142,16 @@ const Homepage = () => {
           </Stack>
           <StyledAboutBox />
         </Stack>
-      </Container>
-      <Container maxWidth={"md"}>
+
         <Box
           sx={{
-            borderRadius: "10px",
+            borderRadius: "25px",
             backgroundColor: colors.GREY,
             padding: "2rem 1rem",
+            marginTop: "6rem",
           }}
         >
-          <Typography
-            mb
-            variant="h5"
-            fontSize={"1.8rem"}
-            textAlign="center"
-            paddingX={["3rem", "15rem"]}
-          >
-            What the People Thinks About Us
-          </Typography>
+          <Heading title="What the People Thinks About Us" />
           <Stack direction={["column", "row"]} paddingY={5}>
             <Testimonial
               name="Nattasha Mith"
@@ -162,46 +174,109 @@ const Homepage = () => {
             />
           </Stack>
         </Box>
-      </Container>
-      <Container maxWidth={"md"}>
-        <Stack direction={["column", "row"]}>
-          <Box
-            component={"img"}
-            src={BRAND1}
-            width={"100%"}
-            maxHeight={"3.5rem"}
-            sx={{
-              objectFit: "contain",
-              marginRight: ["0rem", "1rem"],
-              marginBottom: ["1.5rem"],
-            }}
-          />
-          <Box
-            component={"img"}
-            src={BRAND1}
-            width={"100%"}
-            maxHeight={"3.5rem"}
-            sx={{
-              objectFit: "contain",
-              marginRight: ["0rem", "1rem"],
-              marginBottom: ["1.5rem"],
-            }}
-          />
-          <Box
-            component={"img"}
-            src={BRAND1}
-            width={"100%"}
-            maxHeight={"3.5rem"}
-            sx={{
-              objectFit: "contain",
-              marginRight: ["0rem", "1rem"],
-              marginBottom: ["1.5rem"],
-            }}
-          />
+
+        <Stack
+          direction={["column", "row"]}
+          paddingY={"6rem"}
+          alignItems={"center"}
+          justifyContent="center"
+        >
+          <Partners />
         </Stack>
+
+        <Heading
+          title="Follow Our Projects"
+          des="It is a long established fact that a reader will be distracted by the of readable content of page  lookings at its layouts  points."
+        />
+        <ProjectsGallery />
+      </Container>
+
+      <Box bgcolor={colors.GREY} marginBottom={[6, 8]}>
+        <Container maxWidth={"md"}>
+          <Stack
+            direction={["column", "row"]}
+            paddingY={"6rem"}
+            alignItems={"center"}
+            justifyContent="center"
+          >
+            <StyledBorder>
+              <Heading
+                title="12"
+                des="Years Of Experiance"
+                x="0"
+                fontS="3.0rem"
+                Tcolor={colors.PRIMARY}
+                Dcolor={colors.OFF_GREY}
+              />
+            </StyledBorder>
+            <StyledBorder>
+              <Heading
+                title="85"
+                des="Success Project"
+                x="0"
+                fontS="3.0rem"
+                Tcolor={colors.PRIMARY}
+                Dcolor={colors.OFF_GREY}
+              />
+            </StyledBorder>
+            <StyledBorder>
+              <Heading
+                title="15"
+                des="Active Project"
+                x="0"
+                fontS="3.0rem"
+                Tcolor={colors.PRIMARY}
+                Dcolor={colors.OFF_GREY}
+              />
+            </StyledBorder>
+            <Heading
+              title="95"
+              des="Happy CUstomers"
+              x="0"
+              fontS="3.0rem"
+              Tcolor={colors.PRIMARY}
+              Dcolor={colors.OFF_GREY}
+            />
+          </Stack>
+        </Container>
+      </Box>
+      <Container maxWidth={"md"}>
+        <Heading
+          title="Articles & News"
+          des="It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using."
+        />
+        <ArticlesGallery />
+
+        <Box
+          sx={{
+            borderRadius: "25px",
+            backgroundColor: colors.SECONDARY,
+            padding: "2rem 1rem",
+            margin: "6rem 0",
+            display:"flex",
+            alignItems:"center",
+            justifyContent:"center",
+            flexDirection:"column",
+          }}
+        >
+          <Heading
+            title="Wanna join the interno?"
+            des="It is a long established fact  will be distracted."
+            Dcolor={colors.WHITE}
+            Tcolor={colors.WHITE}
+            fontS="2rem"
+          />
+          <StyledButton sx={{backgroundColor:colors.PRIMARY}}>
+          Contact With Us{" "}
+            <IoIosArrowRoundForward
+              fontSize={"1.5rem"}
+              color={colors.WHITE}
+            />
+          </StyledButton>
+        </Box>
       </Container>
     </>
   );
 };
 
-export default Homepage;
+export default HomePage;

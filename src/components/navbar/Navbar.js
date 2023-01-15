@@ -35,7 +35,10 @@ const StyledContainer = styled(Box)({
   position: "sticky",
   top: 0,
   zIndex: 100,
-});
+  padding:"1.5rem 0",
+  "@media screen and (max-width: 1200px)": {
+    padding:"0.5rem 0",
+  }});
 
 const StyledNavLink = styled(Box)({
   display: "flex",
@@ -87,7 +90,7 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
     <ThemeProvider theme={theme}>
-      <StyledContainer paddingY={"1.5rem"} paddingX={["1rem", "0rem"]}>
+      <StyledContainer>
         <Container maxWidth="md">
           <Box bgcolor={colors.WHITE} marginX={"auto"} padding={["0", "1rem"]}> 
             <Stack
@@ -173,7 +176,7 @@ const Navbar = () => {
                   }}
                 >
                   {/* <RxHamburgerMenu/> */}
-                  mobile
+                  .
                 </Box>
                 {navbarOpen && (
                   <StyledMobileContainer boxShadow={2}>
