@@ -3,10 +3,10 @@ import {
   Work,
   Testimonial,
   Partners,
-  Heading,
   ProjectsGallery,
   ArticlesGallery,
 } from "../../components/home-page";
+import { Heading , PrimaryButton} from "../../commons";
 import {
   Box,
   Stack,
@@ -30,7 +30,6 @@ const StyledBox = styled(Box)({
   borderBottomLeftRadius: "150px",
   display: "flex",
   alignItems: "center",
-
 });
 const StyledAboutBox = styled(Box)({
   background: `url(${ABOUTIMG})`,
@@ -41,29 +40,19 @@ const StyledAboutBox = styled(Box)({
   borderTopRightRadius: "200px",
   width: "100%",
   height: "500px",
-})
-const StyledButton = styled(Button)({
-  color: colors.WHITE,
-  textTransform: "capitalize",
-  backgroundColor: colors.SECONDARY,
-  borderRadius: "15px",
-  padding: "0.5rem 1.5rem",
-  fontSize: "0.7rem",
-  margin: "0.5rem 0",
-  "&:hover": {
-    backgroundColor: colors.PRIMARY,
-  },
 });
+
 
 const StyledTextBox = styled(Box)({
   lineHeight: "1rem",
   color: colors.SECONDARY,
   "@media screen and (max-width: 1200px)": {
-   display:"flex",
-   flexDirection:"column",
-   alignItems:"center",
-   justifyContent:"center",
-  }});
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
 
 const StyledBorder = styled(Box)({
   borderRight: `2px solid ${colors.PRIMARY}`,
@@ -72,7 +61,7 @@ const StyledBorder = styled(Box)({
     borderBottom: `2px solid ${colors.PRIMARY}`,
     paddingBottom: "2rem",
     margin: "1rem",
-    width:"100%"
+    width: "100%",
   },
 });
 
@@ -81,19 +70,13 @@ const HomePage = () => {
     <>
       <StyledBox height={["70vh", "75vh"]}>
         <Container maxWidth={"md"}>
-          <StyledTextBox width={["100%", "43%"]}  textAlign={ ["center", "left"]}>
+          <StyledTextBox width={["100%", "43%"]} textAlign={["center", "left"]}>
             <Typography variant="h3">Let Your Home Be Unique</Typography>
             <Typography>
               There are many variations of the passages of lorem Ipsum
               fromavailable,variations of the passages.
             </Typography>
-            <StyledButton>
-              Get Started{" "}
-              <IoIosArrowRoundForward
-                fontSize={"1.5rem"}
-                color={colors.PRIMARY}
-              />
-            </StyledButton>
+            <PrimaryButton text="Get Started"/>
           </StyledTextBox>
         </Container>
       </StyledBox>
@@ -113,7 +96,7 @@ const HomePage = () => {
             marginY={"3rem"}
             marginRight={["3rem"]}
           >
-            <StyledTextBox textAlign={["center","left"]}>
+            <StyledTextBox textAlign={["center", "left"]}>
               <Typography mb variant="h5" fontSize={"1.8rem"}>
                 We Create The Art Of Stylish Living Stylishly
               </Typography>
@@ -131,13 +114,7 @@ const HomePage = () => {
                   <Typography fontSize="0.8rem">Call Us Anytime</Typography>
                 </Stack>
               </Stack>
-              <StyledButton>
-                Get Free Estimate{" "}
-                <IoIosArrowRoundForward
-                  fontSize={"1.5rem"}
-                  color={colors.PRIMARY}
-                />
-              </StyledButton>
+              <PrimaryButton text="Get Free Estimate"/>
             </StyledTextBox>
           </Stack>
           <StyledAboutBox />
@@ -253,10 +230,10 @@ const HomePage = () => {
             backgroundColor: colors.SECONDARY,
             padding: "2rem 1rem",
             margin: "6rem 0",
-            display:"flex",
-            alignItems:"center",
-            justifyContent:"center",
-            flexDirection:"column",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
           }}
         >
           <Heading
@@ -266,13 +243,7 @@ const HomePage = () => {
             Tcolor={colors.WHITE}
             fontS="2rem"
           />
-          <StyledButton sx={{backgroundColor:colors.PRIMARY}}>
-          Contact With Us{" "}
-            <IoIosArrowRoundForward
-              fontSize={"1.5rem"}
-              color={colors.WHITE}
-            />
-          </StyledButton>
+          <PrimaryButton bgkolor={colors.PRIMARY} iconColor={colors.SECONDARY} text="Send Now"/>
         </Box>
       </Container>
     </>

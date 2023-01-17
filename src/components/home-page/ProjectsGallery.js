@@ -9,7 +9,7 @@ import {
   Typography,
   Avatar,
 } from "@mui/material";
-import { BsTelephone } from "react-icons/bs";
+import { IoIosArrowForward } from "react-icons/io";
 import { colors } from "../../styles/globals";
 import ABOUTIMG from "../../assets/aboutBackground.png";
 
@@ -24,10 +24,7 @@ const GridContainer = styled(Box)({
     gridTemplateColumns: `repeat(auto-fill, minmax(200px, 1fr))`,
   },
 });
-const StyledTitle = styled(Typography)({
-  fontSize: ["12px", "14px"],
-  color: colors.ORANGE,
-});
+
 const StyledGridElements = styled(Box)({
   width: "100%",
 });
@@ -76,7 +73,7 @@ const ProjectsGallery = () => {
                   <Typography fontSize="0.8rem">Decor / Artchitecture</Typography>
                 </Stack>
                 <Avatar>
-                  <BsTelephone color={colors.PRIMARY} />
+                  <IoIosArrowForward color={colors.PRIMARY} />
                 </Avatar>
               </Stack>
               </CardContent>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography, Box } from "@mui/material";
-import { colors } from "../../styles/globals";
+import { colors } from "../styles/globals";
 
 const Heading = ({
   title,
@@ -8,7 +8,7 @@ const Heading = ({
   x = "10rem",
   Tcolor = colors.SECONDARY,
   Dcolor = colors.SECONDARY,
-  fontS= "1.8rem"
+  fontS = "1.8rem",
 }) => {
   return (
     <>
@@ -18,7 +18,7 @@ const Heading = ({
           variant="h5"
           fontSize={fontS}
           color={Tcolor}
-          paddingX={["0rem","5rem"]}
+          paddingX={["0rem", "5rem"]}
         >
           {title}
         </Typography>

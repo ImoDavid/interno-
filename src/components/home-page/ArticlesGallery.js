@@ -9,7 +9,7 @@ import {
   Typography,
   Avatar,
 } from "@mui/material";
-import { BsTelephone } from "react-icons/bs";
+import { IoIosArrowForward } from "react-icons/io";
 import { colors } from "../../styles/globals";
 import ABOUTIMG from "../../assets/aboutBackground.png";
 
@@ -76,7 +76,7 @@ const ArticlesGallery = () => {
                     </Typography>
                   </Stack>
                   <Avatar>
-                    <BsTelephone color={colors.PRIMARY} />
+                    <IoIosArrowForward color={colors.PRIMARY} />
                   </Avatar>
                 </Stack>
               </CardContent>
