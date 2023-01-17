@@ -3,3 +3,4 @@ export { default as Testimonial } from "./Testimonial";
 export { default as Partners } from "./Partners";
 export { default as ProjectsGallery } from "./ProjectsGallery";
 export { default as ArticlesGallery } from "./ArticlesGallery";
+export { default as StylishLiving } from "./StylishLiving";

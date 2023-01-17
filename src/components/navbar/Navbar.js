@@ -8,12 +8,12 @@ import LOGO from "../../assets/Logo.png";
 
 const navLinks = [
   { page: "home", url: "/" },
-  { page: "pages", url: "/about" },
-  { page: "services", url: "/apply" },
-  { page: "project", url: "/claim" },
-  { page: "blog", url: "/shipment" },
-  { page: "contact", url: "/beneficiary" },
-  { page: <CiSearch fontSize={"1.1rem"}/>, url: "/contact" },
+  { page: "about", url: "/about" },
+  { page: "services", url: "/services" },
+  { page: "project", url: "/project" },
+  { page: "blog", url: "/blog" },
+  { page: "contact", url: "/contact" },
+  { page: <CiSearch fontSize={"1.1rem"} />, url: "/search" },
 ];
 export { navLinks };
 
@@ -35,10 +35,11 @@ const StyledContainer = styled(Box)({
   position: "sticky",
   top: 0,
   zIndex: 100,
-  padding:"1.5rem 0",
+  padding: "1.5rem 0",
   "@media screen and (max-width: 1200px)": {
-    padding:"0.5rem 0",
-  }});
+    padding: "0.5rem 0",
+  },
+});
 
 const StyledNavLink = styled(Box)({
   display: "flex",
@@ -50,13 +51,13 @@ const StyledNavLink = styled(Box)({
   fontSize: ["1rem", "0.8rem"],
   cursor: "pointer",
   marginRight: "1.8rem",
-  fontFamily:"Jost",
+  fontFamily: "Jost",
 });
 
 const StyledLink = styled(NavLink)({
   textDecoration: "none",
   color: colors.NAV_TEXT,
- 
+
   "&:hover": {},
 });
 
@@ -92,7 +93,7 @@ const Navbar = () => {
     <ThemeProvider theme={theme}>
       <StyledContainer>
         <Container maxWidth="md">
-          <Box bgcolor={colors.WHITE} marginX={"auto"} padding={["0", "1rem"]}> 
+          <Box bgcolor={colors.WHITE} marginX={"auto"} padding={["0", "1rem"]}>
             <Stack
               direction={"row"}
               alignItems={"center"}
@@ -119,18 +120,20 @@ const Navbar = () => {
                 flex={1}
                 ml={[0, "20px"]}
               >
-                <Box  display={"flex"} alignItems={"center"}>
+                <Box display={"flex"} alignItems={"center"}>
                   <RRLink to={"/"}>
                     <Box
-                                        component={'img'}
-                                        src={LOGO}
-                                        alt={"logo"}
-                                        height={[10, 15]}
-                                        width={[10, 15]}
-                                        mr
-                                    />
+                      component={"img"}
+                      src={LOGO}
+                      alt={"logo"}
+                      height={[10, 15]}
+                      width={[10, 15]}
+                      mr
+                    />
                   </RRLink>
-                 <Typography variant="h6" fontWeight={"700"}>Interno</Typography>
+                  <Typography variant="h6" fontWeight={"700"}>
+                    Interno
+                  </Typography>
                 </Box>
               </Box>
               <Box>
@@ -167,7 +170,7 @@ const Navbar = () => {
                   }}
                   sx={{
                     display: {
-                      xs:  "block",
+                      xs: "block",
                       sm: "block",
                       md: "block",
                       lg: "none",
@@ -175,8 +178,7 @@ const Navbar = () => {
                     },
                   }}
                 >
-                  {/* <RxHamburgerMenu/> */}
-                  .
+                  {/* <RxHamburgerMenu/> */}.
                 </Box>
                 {navbarOpen && (
                   <StyledMobileContainer boxShadow={2}>
