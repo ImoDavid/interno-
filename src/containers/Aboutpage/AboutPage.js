@@ -9,16 +9,16 @@ import {
 import { Formik, Form } from "formik";
 import { AboutDescription } from "../../components/about-page/";
 import { PagesHero, Heading, Input, TextArea,PrimaryButton } from "../../commons";
+import { ImQuotesLeft } from "react-icons/im";
 import { colors } from "../../styles/globals";
-import ABOUTIMG from "../../assets/aboutpagebackground.png";
-import ABOUTPAGE1 from "../../assets/aboutpageimage1.jpg";
-import ABOUTPROFILE from "../../assets/aboutpageprofile1.png";
+
+
 
 const profile = [
-  { img: ABOUTPROFILE },
-  { img: ABOUTPROFILE },
-  { img: ABOUTPROFILE },
-  { img: ABOUTPROFILE },
+  { img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674009083/Photo_11_q1caxw.png" },
+  { img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674009084/Photo_12_u5kg1j.png" },
+  { img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674009083/Photo_11_q1caxw.png" },
+  { img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674009084/Photo_13_hu5kdn.png" },
 ];
 
 
@@ -32,14 +32,19 @@ const AboutPage = () => {
       <Container maxWidth={"md"}>
         <Stack
           direction={"column"}
+          marginX={["3rem", "13rem"]}
+          marginY={"3rem"}
+          justifyContent="center"
+          alignItems="center"
+          paddingX={["1rem", "2rem"]}
+          paddingY={["1rem" ,"2rem"]}
           sx={{
             border: `10px solid ${colors.GREY}`,
-            margin: "3rem 15rem",
-            padding: "1rem",
             textAlign: "center",
             borderRadius: "30px",
           }}
         >
+          <ImQuotesLeft size={"1.5rem"}/>
           <Typography fontStyle={"italic"} fontWeight={"500"} m>
             I like an interior that defies labeling. I don't really want someone
             to walk into a room and know that I did it
@@ -53,7 +58,7 @@ const AboutPage = () => {
                   by the of readable content of a page when lookings at its
                   layouts the points of using that it has a more-or-less normal."
           buttonText="Our Concept"
-          image={ABOUTPAGE1}
+          image="https://res.cloudinary.com/dfljnnxln/image/upload/v1674009084/Photo_9_h7x6h6.png"
         />
 
         <AboutDescription
@@ -66,7 +71,7 @@ const AboutPage = () => {
           when lookings at its layouts the points of using 
           that it has a more-or-less normal."
           buttonText="Our Concept"
-          image={ABOUTPAGE1}
+          image="https://res.cloudinary.com/dfljnnxln/image/upload/v1674009083/Photo_10_uixa5o.png"
         />
       </Container>
 
@@ -87,7 +92,7 @@ const AboutPage = () => {
             my={5}
           >
             {profile.map((ele) => (
-              <Box mr={2}>
+              <Box mr={2} mb>
                 <Box
                   component={"img"}
                   src={ele.img}
@@ -136,7 +141,7 @@ const AboutPage = () => {
                     direction={["column", "row"]}
                     
                   >
-                    <Box marginRight={[0, 5]}>
+                    <Box marginRight={[0, 5]} marginBottom={[3,0]}>
                       <Input name="name" type="text" placeholder="name" />
                     </Box>
                     <Box>

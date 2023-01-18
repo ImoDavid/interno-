@@ -14,13 +14,16 @@ const PagesHero = ({ image, title, des }) => {
         height={["40vh", "30vh"]}
         sx={{
           background: `url(${image})`,
-          backgroundSize: "100% 100%",
-          backgroundPosition: "center center",
+          backgroundSize: ["cover","100% 100%"],
+          backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
+
         }}
       >
         <Stack
           direction={"column"}
+          alignItems="center"
+          justifyContent={"center"}
           bgcolor="white"
           textTransform="capitalize"
           p={1}

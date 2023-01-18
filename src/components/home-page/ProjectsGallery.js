@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { IoIosArrowForward } from "react-icons/io";
 import { colors } from "../../styles/globals";
-import ABOUTIMG from "../../assets/aboutBackground.png";
+
 
 const GridContainer = styled(Box)({
   display: "grid",
@@ -31,19 +31,19 @@ const StyledGridElements = styled(Box)({
 
 const data = [
   {
-    img: ABOUTIMG,
+    img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674009084/Photo_3_-2_wwaglw.png",
     bend: "0 50px 0 0",
   },
   {
-    img: ABOUTIMG,
+    img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674009083/Photo_4_sgfkv8.png",
     bend: "50px 0 0 0",
   },
   {
-    img: ABOUTIMG,
+    img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674009084/Photo_5_hkivq0.png",
     bend: "0 0 50px 0",
   },
   {
-    img: ABOUTIMG,
+    img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674009084/Photo_6_fq9bao.png",
     bend: "0 0 0 50px",
   },
 ];

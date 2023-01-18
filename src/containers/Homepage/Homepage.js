@@ -5,41 +5,28 @@ import {
   Partners,
   ProjectsGallery,
   ArticlesGallery,
+  StylishLiving,
 } from "../../components/home-page";
-import { Heading , PrimaryButton} from "../../commons";
+import { Heading, PrimaryButton } from "../../commons";
 import {
   Box,
   Stack,
   styled,
   Container,
   Typography,
-  Button,
-  Avatar,
 } from "@mui/material";
-import { BsTelephone } from "react-icons/bs";
-import { IoIosArrowRoundForward } from "react-icons/io";
 import { colors } from "../../styles/globals";
-import HEADER from "../../assets/headerBackground.jpg";
-import ABOUTIMG from "../../assets/aboutBackground.png";
+
+
 
 const StyledBox = styled(Box)({
-  background: `url(${HEADER})`,
+  background: `url(https://res.cloudinary.com/dfljnnxln/image/upload/v1674007936/Photo_3_1_culfor.png)`,
   backgroundSize: "100% 100%",
   backgroundPosition: " center",
   backgroundRepeat: "no-repeat",
   borderBottomLeftRadius: "150px",
   display: "flex",
   alignItems: "center",
-});
-const StyledAboutBox = styled(Box)({
-  background: `url(${ABOUTIMG})`,
-  backgroundSize: "cover",
-  backgroundPosition: "center center",
-  backgroundRepeat: "no-repeat",
-  borderBottomLeftRadius: "100px",
-  borderTopRightRadius: "200px",
-  width: "100%",
-  height: "500px",
 });
 
 
@@ -76,7 +63,7 @@ const HomePage = () => {
               There are many variations of the passages of lorem Ipsum
               fromavailable,variations of the passages.
             </Typography>
-            <PrimaryButton text="Get Started"/>
+            <PrimaryButton text="Get Started" />
           </StyledTextBox>
         </Container>
       </StyledBox>
@@ -88,38 +75,14 @@ const HomePage = () => {
           <Work title={"Realization"} />
         </Stack>
 
-        <Stack direction={["column", "row"]} paddingY={2} marginBottom={"2rem"}>
-          <Stack
-            alignItems={"center"}
-            justifyContent={"center"}
-            width={["100%", "600px"]}
-            marginY={"3rem"}
-            marginRight={["3rem"]}
-          >
-            <StyledTextBox textAlign={["center", "left"]}>
-              <Typography mb variant="h5" fontSize={"1.8rem"}>
-                We Create The Art Of Stylish Living Stylishly
-              </Typography>
-              <Typography fontSize={"0.8rem"}>
-                It is a long established fact that a reader will be distracted
-                by the of readable content of a page when lookings at its
-                layouts the points of using that it has a more-or-less normal.
-              </Typography>
-              <Stack direction="row" spacing={2} marginY={3} marginX={"auto"}>
-                <Avatar>
-                  <BsTelephone color={colors.PRIMARY} />
-                </Avatar>
-                <Stack direction="column">
-                  <Typography fontWeight="500">012345678</Typography>
-                  <Typography fontSize="0.8rem">Call Us Anytime</Typography>
-                </Stack>
-              </Stack>
-              <PrimaryButton text="Get Free Estimate"/>
-            </StyledTextBox>
-          </Stack>
-          <StyledAboutBox />
-        </Stack>
-
+        <StylishLiving
+          num="012345678"
+          title="We Create The Art Of Stylish Living Stylishly"
+          des="It is a long established fact that a reader will be distracted by
+              the of readable content of a page when lookings at its layouts the
+              points of using that it has a more-or-less normal."
+          image="https://res.cloudinary.com/dfljnnxln/image/upload/v1673973174/aboutBackground_uouby3.png"
+        />
         <Box
           sx={{
             borderRadius: "25px",
@@ -134,13 +97,15 @@ const HomePage = () => {
               name="Nattasha Mith"
               city="Sydney, USA"
               text="Lorem Ipsum is simply dummy text of the typesetting industry.Ipsum has been."
-            />
+              img="https://res.cloudinary.com/dfljnnxln/image/upload/v1674009084/Photo_higgio.png"
+             />
             <Testimonial
               name={"Raymond Galario"}
               city={"Sydney, Australia"}
               text="Lorem Ipsum is simply dummy text of the typesetting industry. 
-                Ipsum has been scrambled it 
-                to make a type book."
+              Ipsum has been scrambled it 
+              to make a type book."
+              img="https://res.cloudinary.com/dfljnnxln/image/upload/v1674009084/Photo_1_zxa89n.png"
             />
             <Testimonial
               name="Benny Roll"
@@ -148,6 +113,7 @@ const HomePage = () => {
               text="Lorem Ipsum is simply dummy 
               text of the typesetting industry. 
               Ipsum has been scrambled."
+              img="https://res.cloudinary.com/dfljnnxln/image/upload/v1674009083/Photo_2_zmmosb.png"
             />
           </Stack>
         </Box>
@@ -243,7 +209,11 @@ const HomePage = () => {
             Tcolor={colors.WHITE}
             fontS="2rem"
           />
-          <PrimaryButton bgkolor={colors.PRIMARY} iconColor={colors.SECONDARY} text="Send Now"/>
+          <PrimaryButton
+            bgkolor={colors.PRIMARY}
+            iconColor={colors.SECONDARY}
+            text="Send Now"
+          />
         </Box>
       </Container>
     </>
