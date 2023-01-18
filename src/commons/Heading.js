@@ -6,19 +6,21 @@ const Heading = ({
   title,
   des,
   x = "10rem",
+  PX="5rem",
   Tcolor = colors.SECONDARY,
   Dcolor = colors.SECONDARY,
   fontS = "1.8rem",
+  Talign="center"
 }) => {
   return (
     <>
-      <Box mb textAlign="center" paddingX={["0rem", x]}>
+      <Box mb textAlign={Talign} paddingX={["0rem", x]}>
         <Typography
           mb
           variant="h5"
           fontSize={fontS}
           color={Tcolor}
-          paddingX={["0rem", "5rem"]}
+          paddingX={["0rem", PX]}
         >
           {title}
         </Typography>

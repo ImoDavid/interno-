@@ -29,22 +29,8 @@ const StyledGridElements = styled(Box)({
   width: "100%",
 });
 
-const data = [
-  {
-    img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674009084/Photo_7_ict8n7.png",
-    bgcolor: colors.WHITE,
-  },
-  {
-    img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674010427/Photo_2_svfsql.png",
-    bgcolor: colors.GREY,
-  },
-  {
-    img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674010427/Photo_1_1_wrsupq.png",
-    bgcolor: colors.WHITE,
-  },
-  
-];
-const ArticlesGallery = () => {
+
+const ArticlesGallery = ({data}) => {
   return (
     <Box marginTop={[6, 6]} marginBottom={[6, 8]}>
       <GridContainer>
@@ -69,6 +55,7 @@ const ArticlesGallery = () => {
                 sx={{ objectFit: "cover",borderRadius: "25px 25px 0 0",}}
               />
               <CardContent sx={{ paddingX: 0 }}>
+                {!ele.des && 
                 <Stack direction="row" justifyContent="space-between">
                   <Stack direction="column">
                     <Typography fontWeight="500">Modern Kitchan</Typography>
@@ -80,6 +67,20 @@ const ArticlesGallery = () => {
                     <IoIosArrowForward color={colors.PRIMARY} />
                   </Avatar>
                 </Stack>
+                }
+                {ele.des && 
+                 <Stack direction="column">
+                   <Typography fontWeight="500" paddingRight={[1,5]} mb>{ele.des}</Typography>
+                   <Stack direction="row" justifyContent="space-between" alignItems="center">
+                   <Typography fontSize="0.8rem">
+                   26 December,2022 
+                   </Typography>
+                 <Avatar>
+                   <IoIosArrowForward color={colors.PRIMARY} />
+                 </Avatar>
+                 </Stack>
+               </Stack>
+                }
               </CardContent>
             </Card>
           </StyledGridElements>

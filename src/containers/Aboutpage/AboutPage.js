@@ -37,7 +37,7 @@ const AboutPage = () => {
         image={
           "https://res.cloudinary.com/dfljnnxln/image/upload/v1673966522/aboutpagebackground_x6c9sx.png"
         }
-        title="about"
+        title="about us"
         des="about/about us"
       />
       <Container maxWidth={"md"}>
@@ -122,12 +122,6 @@ const AboutPage = () => {
             }}
             onSubmit={(values, { setSubmitting, resetForm }) => {
               setTimeout(async () => {
-                const payload = {
-                  firstname: values.firstname,
-                  lastname: values.surname,
-                  Email: values.Email,
-                  message: values.message,
-                };
                 try {
                   resetForm(true);
                   setSubmitting(false);
@@ -170,7 +164,7 @@ const AboutPage = () => {
                       justifyContent: "center",
                     }}
                   >
-                    <PrimaryButton text="Send Now" />
+                    <PrimaryButton type={"submit"} text="Send Now" />
                   </StyledBox>
                 </Form>
               </Container>

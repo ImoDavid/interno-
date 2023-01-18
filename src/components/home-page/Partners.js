@@ -1,6 +1,10 @@
 import React from "react";
 import { Box } from "@mui/material";
 import BRAND1 from "../../assets/brand1.svg";
+import BRAND2 from "../../assets/02.svg";
+import BRAND3 from "../../assets/03.svg";
+import BRAND4 from "../../assets/04.svg";
+import BRAND5 from "../../assets/05.svg";
 
 
 const partners = [
@@ -8,16 +12,16 @@ const partners = [
       img:BRAND1,
     },
     {
-      img:BRAND1,
+      img:BRAND2,
     },
     {
-      img:BRAND1,
+      img:BRAND3,
     },
     {
-        img:BRAND1,
+        img:BRAND4,
       },
       {
-        img:BRAND1,
+        img:BRAND5,
       },
   ];
 const Partners = () => {
@@ -33,7 +37,7 @@ const Partners = () => {
                 sx={{
                   objectFit: "contain",
                   marginRight: ["0rem", "1rem"],
-                  marginBottom: ["1.5rem"],
+                  marginBottom: ["1.8rem"],
                 }}
               />
             ))}

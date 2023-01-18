@@ -52,6 +52,22 @@ const StyledBorder = styled(Box)({
   },
 });
 
+const data = [
+  {
+    img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674009084/Photo_7_ict8n7.png",
+    bgcolor: colors.WHITE,
+  },
+  {
+    img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674010427/Photo_2_svfsql.png",
+    bgcolor: colors.GREY,
+  },
+  {
+    img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674010427/Photo_1_1_wrsupq.png",
+    bgcolor: colors.WHITE,
+  },
+  
+];
+
 const HomePage = () => {
   return (
     <>
@@ -188,7 +204,7 @@ const HomePage = () => {
           title="Articles & News"
           des="It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using."
         />
-        <ArticlesGallery />
+        <ArticlesGallery data={data}/>
 
         <Box
           sx={{

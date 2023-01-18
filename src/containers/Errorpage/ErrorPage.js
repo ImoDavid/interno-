@@ -13,6 +13,7 @@ const ErrorPage = () => {
             title="We are sorry, but the page
         you requested was not found"
         btext="Back To Home"
+        fontSize="1.6rem"
           />
         </Box>
       </Container>

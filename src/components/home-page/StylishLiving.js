@@ -29,6 +29,7 @@ const StylishLiving = ({
   err,
   title,
   des,
+  fontSize="1.8rem",
 }) => {
   return (
     <>
@@ -46,7 +47,7 @@ const StylishLiving = ({
                 {err}
               </Typography>
             )}
-            <Typography mb variant="h5" fontSize={"1.8rem"}>
+            <Typography mb variant="h5" fontSize={fontSize}>
               {title}
             </Typography>
             <Typography fontSize={"0.8rem"}>

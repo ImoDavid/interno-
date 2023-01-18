@@ -5,6 +5,7 @@ const StyledBox = styled(Box)({
   display: "flex",
   alignItems: "end",
   justifyContent: "center",
+  
 });
 
 const PagesHero = ({ image, title, des }) => {
@@ -26,18 +27,18 @@ const PagesHero = ({ image, title, des }) => {
           justifyContent={"center"}
           bgcolor="white"
           textTransform="capitalize"
-          p={1}
+          p={2}
           borderRadius="15px 15px 0 0"
         >
           <Typography
-            variant="h4"
+            variant="h6"
             fontWeight={700}
             letterSpacing={".3rem"}
             textAlign={"center"}
           >
             {title}
           </Typography>
-          <Typography>{des}</Typography>
+          <Typography fontSize={"0.8rem"}>{des}</Typography>
         </Stack>
       </StyledBox>
     </>
