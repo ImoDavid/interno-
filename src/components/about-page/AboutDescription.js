@@ -36,7 +36,6 @@ const AboutDescripton = ({
   marginRight = "3rem",
   orderBox = "1",
   title,
-  des,
   buttonText,
   orderPic = "2",
   image,
@@ -56,7 +55,12 @@ const AboutDescripton = ({
             <Typography mb variant="h5" fontSize={"1.8rem"}>
               {title}
             </Typography>
-            <Typography fontSize={"0.8rem"}>{des}</Typography>
+            <Typography fontSize={"0.8rem"}>
+              {" "}
+              It is a long established fact that a reader will be distracted by
+              the of readable content of a page when lookings at its layouts the
+              points of using that it has a more-or-less normal.
+            </Typography>
 
             <StyledButton>
               {buttonText}{" "}

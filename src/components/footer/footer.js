@@ -95,7 +95,7 @@ const Footer = () => {
                   lookings.
                 </Typography>
               </Box>
-              <Stack direction={["column","row"]}>
+              <Stack direction="row">
                <StylediconBox><BsFacebook/></StylediconBox> 
                <StylediconBox><AiOutlineTwitter/></StylediconBox> 
                <StylediconBox><FaLinkedinIn/></StylediconBox> 
@@ -164,7 +164,7 @@ const Footer = () => {
           </Stack>
 
           <Typography color={colors.FOOTER_TEXT} fontSize="0.8rem">
-            &#169; Copyrights 2021. All rights reserved.
+            &#169; Copyrights 2023. All rights reserved.
           </Typography>
         </Box>
       </Container>

@@ -1,26 +1,31 @@
 import React from "react";
-import {
-  Stack,
-  Box,
-  styled,
-  Typography,
-  Container,
-} from "@mui/material";
+import { Stack, Box, styled, Typography, Container } from "@mui/material";
 import { Formik, Form } from "formik";
 import { AboutDescription } from "../../components/about-page/";
-import { PagesHero, Heading, Input, TextArea,PrimaryButton } from "../../commons";
+import {
+  PagesHero,
+  Heading,
+  Input,
+  TextArea,
+  PrimaryButton,
+} from "../../commons";
 import { ImQuotesLeft } from "react-icons/im";
 import { colors } from "../../styles/globals";
 
-
-
 const profile = [
-  { img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674009083/Photo_11_q1caxw.png" },
-  { img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674009084/Photo_12_u5kg1j.png" },
-  { img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674009083/Photo_11_q1caxw.png" },
-  { img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674009084/Photo_13_hu5kdn.png" },
+  {
+    img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674009083/Photo_11_q1caxw.png",
+  },
+  {
+    img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674009084/Photo_12_u5kg1j.png",
+  },
+  {
+    img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674009083/Photo_11_q1caxw.png",
+  },
+  {
+    img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674009084/Photo_13_hu5kdn.png",
+  },
 ];
-
 
 const StyledBox = styled(Box)({
   marginBottom: ["1rem", "1.4rem"],
@@ -28,7 +33,13 @@ const StyledBox = styled(Box)({
 const AboutPage = () => {
   return (
     <>
-      <PagesHero image={"https://res.cloudinary.com/dfljnnxln/image/upload/v1673966522/aboutpagebackground_x6c9sx.png"} title="about" des="about/about us" />
+      <PagesHero
+        image={
+          "https://res.cloudinary.com/dfljnnxln/image/upload/v1673966522/aboutpagebackground_x6c9sx.png"
+        }
+        title="about"
+        des="about/about us"
+      />
       <Container maxWidth={"md"}>
         <Stack
           direction={"column"}
@@ -37,14 +48,14 @@ const AboutPage = () => {
           justifyContent="center"
           alignItems="center"
           paddingX={["1rem", "2rem"]}
-          paddingY={["1rem" ,"2rem"]}
+          paddingY={["1rem", "2rem"]}
           sx={{
             border: `10px solid ${colors.GREY}`,
             textAlign: "center",
             borderRadius: "30px",
           }}
         >
-          <ImQuotesLeft size={"1.5rem"}/>
+          <ImQuotesLeft size={"1.5rem"} />
           <Typography fontStyle={"italic"} fontWeight={"500"} m>
             I like an interior that defies labeling. I don't really want someone
             to walk into a room and know that I did it
@@ -54,9 +65,6 @@ const AboutPage = () => {
 
         <AboutDescription
           title="What We Do"
-          des=" It is a long established fact that a reader will be distracted
-                  by the of readable content of a page when lookings at its
-                  layouts the points of using that it has a more-or-less normal."
           buttonText="Our Concept"
           image="https://res.cloudinary.com/dfljnnxln/image/upload/v1674009084/Photo_9_h7x6h6.png"
         />
@@ -67,9 +75,6 @@ const AboutPage = () => {
           marginLeft={"3rem"}
           marginRight="0"
           title="The End Result"
-          des="It is a long established fact that a reader will be distracted by the of readable content of a page 
-          when lookings at its layouts the points of using 
-          that it has a more-or-less normal."
           buttonText="Our Concept"
           image="https://res.cloudinary.com/dfljnnxln/image/upload/v1674009083/Photo_10_uixa5o.png"
         />
@@ -107,7 +112,7 @@ const AboutPage = () => {
       </Box>
       <Container maxWidth={"md"}>
         <Heading title="Creative project? Let's have a productive talk." />
-        <Box padding={[1,7]}>
+        <Box padding={[1, 7]}>
           <Formik
             initialValues={{
               firstname: "",
@@ -134,35 +139,41 @@ const AboutPage = () => {
           >
             {({ isSubmitting }) => (
               <Container maxwidth={"sm"}>
+                <Form>
+                  <StyledBox>
+                    <Stack direction={["column", "row"]}>
+                      <Box marginRight={[0, 5]} marginBottom={[3, 0]}>
+                        <Input name="name" type="text" placeholder="name" />
+                      </Box>
+                      <Box>
+                        <Input
+                          name="Email"
+                          type="text"
+                          placeholder="lastname"
+                        />
+                      </Box>
+                    </Stack>
+                  </StyledBox>
 
-              <Form>
-                <StyledBox>
-                  <Stack
-                    direction={["column", "row"]}
-                    
+                  <StyledBox>
+                    <TextArea
+                      name="message"
+                      type="text"
+                      placeholder="Hello Iam Intrested in.."
+                    />
+                  </StyledBox>
+
+                  <StyledBox
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
                   >
-                    <Box marginRight={[0, 5]} marginBottom={[3,0]}>
-                      <Input name="name" type="text" placeholder="name" />
-                    </Box>
-                    <Box>
-                      <Input name="Email" type="text" placeholder="lastname" />
-                    </Box>
-                  </Stack>
-                </StyledBox>
-
-                <StyledBox>
-                  <TextArea
-                    name="message"
-                    type="text"
-                    placeholder="Hello Iam Intrested in.."
-                  />
-                </StyledBox>
-
-                <StyledBox sx={{display:"flex", alignItems:"center", justifyContent:"center"}}>
-                  <PrimaryButton text="Send Now"/>
-                </StyledBox>
-              </Form>
-                    </Container>
+                    <PrimaryButton text="Send Now" />
+                  </StyledBox>
+                </Form>
+              </Container>
             )}
           </Formik>
         </Box>
