@@ -3,6 +3,7 @@ import { Link as RRLink, NavLink } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Box, Stack, styled, Container, Typography } from "@mui/material";
 import { CiSearch } from "react-icons/ci";
+import { RiMenu3Fill, RiCloseFill } from "react-icons/ri";
 import { colors } from "../../styles/globals";
 import LOGO from "../../assets/Logo.png";
 
@@ -178,7 +179,7 @@ const Navbar = () => {
                     },
                   }}
                 >
-                  {/* <RxHamburgerMenu/> */}.
+                {navbarOpen ? <RiCloseFill color={colors.PRIMARY}/> :<RiMenu3Fill/> }  
                 </Box>
                 {navbarOpen && (
                   <StyledMobileContainer boxShadow={2}>

@@ -1,7 +1,10 @@
 import React from "react";
 import { Link as RRLink, NavLink } from "react-router-dom";
-import { Box, styled, Stack, Typography, Link, Container } from "@mui/material";
+import { Box, styled, Stack, Typography, Container } from "@mui/material";
 import { colors } from "../../styles/globals";
+import { BsFacebook, BsInstagram } from "react-icons/bs";
+import { AiOutlineTwitter } from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
 import LOGO from "../../assets/Logo.png";
 
 const StyledFooterBox = styled(Box)({
@@ -11,6 +14,13 @@ const StyledFooterBox = styled(Box)({
     width: "18%",
   }});
 
+  const StylediconBox = styled(Box)({
+    margin:"1rem",
+    fontSize:"0.8rem",
+    ':first-child':{
+      marginLeft:"0rem"
+    }
+    })
 
 const StyledLinkBox = styled(Box)({
   display: "flex",
@@ -85,6 +95,12 @@ const Footer = () => {
                   lookings.
                 </Typography>
               </Box>
+              <Stack direction={["column","row"]}>
+               <StylediconBox><BsFacebook/></StylediconBox> 
+               <StylediconBox><AiOutlineTwitter/></StylediconBox> 
+               <StylediconBox><FaLinkedinIn/></StylediconBox> 
+               <StylediconBox><BsInstagram/></StylediconBox> 
+              </Stack>
             </StyledFooterBox>
             <StyledFooterBox>
               <StyledHeading variant="h6">pages</StyledHeading>
