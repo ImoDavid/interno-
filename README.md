@@ -1,26 +1,26 @@
 # Interno multi page website
 
-## A unique multi page website built with Reactjs and Material UI.
-## click here to view: interno-decor.netlify.app
+#### A unique multi page website built with Reactjs and Material UI.
+### click here to view: [interno.com](https://interno-decor.netlify.app/)
 
-### This project is currently in development.Pages yet to be developed will redirect to 404 Error page when clicked.
+##### This project is currently in development.Pages yet to be developed will redirect to 404 Error page when clicked.
 
-### Installation and Setup Instructions
+#### Installation and Setup Instructions
 
-### Clone down this repository. You will need node and npm installed globally on your machine.
+#### Clone down this repository. You will need node and npm installed globally on your machine.
 
 ## Installation:
 
 ### npm install
 
-##To Run Test Suite:
+### To Run Test Suite:
 
 ### npm test
 
-## To Start Server:
+### To Start Server:
 
 ### npm start
 
-## To Visit App:
+### To Visit App:
 
-### localhost:3000
+#### localhost:3000
