@@ -38,12 +38,15 @@ const ArticlesGallery = ({data}) => {
           <StyledGridElements key={ele.img}>
             <Card
               sx={{
-                backgroundColor:ele.bgcolor,
+                backgroundColor:colors.WHITE,
                 p: 1,
                 borderRadius: "25px",
                 border: "1px solid rgba(0, 0, 0, 0.1)",
                 boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.05)",
                 borderColor: `grey`,
+                ':hover':{
+                    backgroundColor:colors.GREY,
+                }
               }}
               elevation={0}
             >

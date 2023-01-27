@@ -8,16 +8,8 @@ import {
   StylishLiving,
 } from "../../components/home-page";
 import { Heading, PrimaryButton } from "../../commons";
-import {
-  Box,
-  Stack,
-  styled,
-  Container,
-  Typography,
-} from "@mui/material";
+import { Box, Stack, styled, Container, Typography } from "@mui/material";
 import { colors } from "../../styles/globals";
-
-
 
 const StyledBox = styled(Box)({
   background: `url(https://res.cloudinary.com/dfljnnxln/image/upload/v1674007936/Photo_3_1_culfor.png)`,
@@ -28,7 +20,6 @@ const StyledBox = styled(Box)({
   display: "flex",
   alignItems: "center",
 });
-
 
 const StyledTextBox = styled(Box)({
   lineHeight: "1rem",
@@ -55,17 +46,13 @@ const StyledBorder = styled(Box)({
 const data = [
   {
     img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674009084/Photo_7_ict8n7.png",
-    bgcolor: colors.WHITE,
   },
   {
     img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674010427/Photo_2_svfsql.png",
-    bgcolor: colors.GREY,
   },
   {
     img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674010427/Photo_1_1_wrsupq.png",
-    bgcolor: colors.WHITE,
   },
-  
 ];
 
 const HomePage = () => {
@@ -114,7 +101,7 @@ const HomePage = () => {
               city="Sydney, USA"
               text="Lorem Ipsum is simply dummy text of the typesetting industry.Ipsum has been."
               img="https://res.cloudinary.com/dfljnnxln/image/upload/v1674009084/Photo_higgio.png"
-             />
+            />
             <Testimonial
               name={"Raymond Galario"}
               city={"Sydney, Australia"}
@@ -204,7 +191,7 @@ const HomePage = () => {
           title="Articles & News"
           des="It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using."
         />
-        <ArticlesGallery data={data}/>
+        <ArticlesGallery data={data} />
 
         <Box
           sx={{

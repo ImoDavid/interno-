@@ -1,5 +1,12 @@
 import React from "react";
-import { Stack, Box, styled, Typography, Container ,Avatar} from "@mui/material";
+import {
+  Stack,
+  Box,
+  styled,
+  Typography,
+  Container,
+  Avatar,
+} from "@mui/material";
 import { IoIosArrowForward } from "react-icons/io";
 
 import { ArticlesGallery } from "../../components/home-page/";
@@ -19,7 +26,7 @@ const StyledTextBox = styled(Box)({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-between",
   },
 });
 
@@ -27,32 +34,26 @@ const data = [
   {
     img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674009084/Photo_7_ict8n7.png",
     des: "Let’s Get Solution For Building Construction Work",
-    bgcolor: colors.WHITE,
   },
   {
     img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674010427/Photo_2_svfsql.png",
     des: "Low Cost Latest Invented Interior Designing Ideas.",
-    bgcolor: colors.GREY,
   },
   {
     img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674010427/Photo_1_1_wrsupq.png",
     des: "Best For Any Office & Business Interior Solution",
-    bgcolor: colors.WHITE,
   },
   {
     img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674009084/Photo_7_ict8n7.png",
     des: "Let’s Get Solution For Building Construction Work",
-    bgcolor: colors.WHITE,
   },
   {
     img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674010427/Photo_2_svfsql.png",
     des: "Low Cost Latest Invented Interior Designing Ideas.",
-    bgcolor: colors.WHITE,
   },
   {
     img: "https://res.cloudinary.com/dfljnnxln/image/upload/v1674010427/Photo_1_1_wrsupq.png",
     des: "Best For Any Office & Business Interior Solution",
-    bgcolor: colors.WHITE,
   },
 ];
 
@@ -92,20 +93,25 @@ const BlogPage = () => {
                   {" "}
                   Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
                   turpis dignissim maximus.posuere in.Contrary to popular
-                  belief. 
+                  belief.
                 </Typography>
                 <Typography fontSize={"0.8rem"} mb={2}>
                   {" "}
-                  Lorem Ipsum is not simply random text. It has roots in a piece of classica.
+                  Lorem Ipsum is not simply random text. It has roots in a piece
+                  of classica.
                 </Typography>
-                <Stack direction="row" justifyContent="space-between" alignItems="center">
-                   <Typography fontSize="0.8rem">
-                   26 December,2022 
-                   </Typography>
-                 <Avatar>
-                   <IoIosArrowForward color={colors.PRIMARY} />
-                 </Avatar>
-                 </Stack>
+                <Stack
+                  direction="row"
+                  justifyContent="space-Between"
+                  alignItems="center"
+                >
+                  <Box>
+                    <Typography fontSize="0.8rem">26 December,2022</Typography>
+                  </Box>
+                  <Avatar>
+                    <IoIosArrowForward color={colors.PRIMARY} />
+                  </Avatar>
+                </Stack>
               </StyledTextBox>
             </Box>
             <StyledAboutBox

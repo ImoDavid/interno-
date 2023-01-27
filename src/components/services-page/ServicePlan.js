@@ -20,32 +20,28 @@ const StyledGridElements = styled(Box)({
 });
 
 const StyledButton = styled(Button)({
-    color: colors.SECONDARY,
-    textTransform: "capitalize",
-    backgroundColor: colors.WHITE,
-    margin: "1.5rem 0",
-    "&:hover": {
-      backgroundColor: colors.PRIMARY,
-      color:colors.WHITE,
-    },
-  });
+  color: colors.SECONDARY,
+  textTransform: "capitalize",
+  backgroundColor: colors.WHITE,
+  margin: "1.5rem 0",
+  "&:hover": {
+    backgroundColor: colors.PRIMARY,
+    color: colors.WHITE,
+  },
+});
 
 const data = [
   {
     title: "Project Plan",
-    bgcolor: colors.WHITE,
   },
   {
     title: "Interior Work",
-    bgcolor: colors.WHITE,
   },
   {
     title: "Retail Design",
-    bgcolor: colors.WHITE,
   },
   {
     title: "2d/3d Art Work",
-    bgcolor: colors.WHITE,
   },
   {
     title: "Interior Work",
@@ -53,7 +49,6 @@ const data = [
   },
   {
     title: "Decoration Work",
-    bgcolor: colors.WHITE,
   },
 ];
 const ServicePlan = () => {
@@ -69,8 +64,11 @@ const ServicePlan = () => {
                   margin: "1rem",
                   lineHeight: "1rem",
                   paddingX: ["1rem"],
-                  borderRadius:"25px",
-                  backgroundColor:ele.bgcolor,
+                  borderRadius: "25px",
+                  backgroundColor: colors.WHITE,
+                  ":hover": {
+                    backgroundColor: colors.GREY,
+                  },
                 }}
               >
                 <Typography mb variant="h6">

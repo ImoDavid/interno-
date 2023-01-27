@@ -61,6 +61,12 @@ const StyledLink = styled(NavLink)({
 
   "&:hover": {},
 });
+const StyledBrand = styled(NavLink)({
+  textDecoration: "none",
+  color: "black",
+
+  "&:hover": {},
+});
 
 const StyledMobileContainer = styled(Box)({
   position: "absolute",
@@ -121,7 +127,7 @@ const Navbar = () => {
                 flex={1}
                 ml={[0, "20px"]}
               >
-                <Box display={"flex"} alignItems={"center"}>
+                <Box display={"flex"} flexDirection={"row"} alignItems={"center"}>
                   <RRLink to={"/"}>
                     <Box
                       component={"img"}
@@ -132,9 +138,12 @@ const Navbar = () => {
                       mr
                     />
                   </RRLink>
+                  <StyledBrand to={"/"}>
+
                   <Typography variant="h6" fontWeight={"700"}>
                     Interno
                   </Typography>
+                  </StyledBrand>
                 </Box>
               </Box>
               <Box>
