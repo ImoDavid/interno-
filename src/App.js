@@ -4,14 +4,16 @@ import { HomePage } from "./containers/Homepage";
 import { AboutPage } from "./containers/Aboutpage";
 import { ServicesPage } from "./containers/Servicespage";
 import { ErrorPage } from "./containers/Errorpage";
-import {BlogPage} from "./containers/Blogpage";
+import { BlogPage } from "./containers/Blogpage";
 import { Navbar } from "./components/navbar";
 import { Footer } from "./components/footer";
+import { ScrollToTop } from "./commons";
 import "./App.css";
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/blog" element={<BlogPage />} />
